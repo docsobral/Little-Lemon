@@ -3,7 +3,7 @@ import './header.css'
 
 export default function Header() {
   return (
-    <header>
+    <header className='header'>
       <section className='headerImage'>
         <img src={logo} className="App-logo" alt="logo" />
       </section>
