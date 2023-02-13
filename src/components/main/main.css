@@ -172,3 +172,137 @@ p.price {
 
   margin: auto 0px;
 }
+
+main.testimonials {
+  background-color: #FDF4EE;
+}
+
+.testimonials article.section {
+  max-width: 860px;
+  margin: 0px auto;
+}
+
+.testimonials article.section h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 42px;
+  color: #EE9972;
+  text-align: center;
+
+  padding: 120px 0px 60px;
+  margin: 0px;
+}
+
+section.testimonials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-bottom: 150px;
+}
+
+section.testimonial {
+  width: 200px;
+  height: 180px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+}
+
+.testimonial section.rating {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  margin: 25px 20px 20px;
+}
+
+.testimonial section.rating img {
+  width: 16px;
+}
+
+.testimonial section.avatar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 20px;
+}
+
+section.nameAndUsername h2 {
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #333333;
+
+  margin: 0px 8px;
+}
+
+section.nameAndUsername h3 {
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #6E6F6E;
+
+  margin: 0px 8px;
+}
+
+section.testimonial section.description p {
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #6E6F6E;
+
+  margin: 20px;
+}
+
+article.restaurantDescription {
+  max-width: 860px;
+  margin: 0px auto;
+
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+article.restaurantDescription section.text {
+  max-width: 370px;
+  width: 370px;
+
+  margin: 120px 0px 20px;
+}
+
+article.restaurantDescription section.text h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 64px;
+
+  margin: 0px;
+}
+
+article.restaurantDescription section.text h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+
+  margin: 0px;
+}
+
+article.restaurantDescription section.text p {
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+
+  text-align: justify;
+}
+
+section.images img {
+  margin: 120px 0px 20px;
+}
