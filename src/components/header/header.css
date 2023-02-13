@@ -1,0 +1,36 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+
+  max-width: 860px;
+  margin: 20px auto;
+}
+
+section.headerImage {
+  width: 220px;
+  min-width: 220px;
+}
+
+section.headerImage img {
+  width: 100%;
+}
+
+section.headerNav {
+  width: 75%;
+  min-width: 620px;
+}
+
+section.headerNav nav {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+
+  list-style: none;
+  justify-content: flex-end;
+
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+}
