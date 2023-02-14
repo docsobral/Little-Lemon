@@ -25,6 +25,7 @@ export default function Specials() {
           <section className='cardImage'>
             <img
               src={salad}
+              alt="Salad"
             />
           </section>
 
@@ -44,7 +45,7 @@ export default function Specials() {
             </p>
 
             <button className='order'>
-              Order a delivery <img src={bike} />
+              Order a delivery <img src={bike} alt="icon" />
             </button>
           </section>
         </section>
@@ -53,6 +54,7 @@ export default function Specials() {
           <section className='cardImage'>
             <img
               src={bruchetta}
+              alt="Bruchetta"
             />
           </section>
 
@@ -74,7 +76,7 @@ export default function Specials() {
             </p>
 
             <button className='order'>
-              Order a delivery <img src={bike} />
+              Order a delivery <img src={bike} alt="icon" />
             </button>
           </section>
         </section>
@@ -83,6 +85,7 @@ export default function Specials() {
           <section className='cardImage'>
             <img
               src={dessert}
+              alt="Dessert"
             />
           </section>
 
@@ -104,7 +107,7 @@ export default function Specials() {
             </p>
 
             <button className='order'>
-              Order a delivery <img src={bike} />
+              Order a delivery <img src={bike} alt="icon" />
             </button>
           </section>
         </section>

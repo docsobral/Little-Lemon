@@ -19,6 +19,7 @@ export default function About() {
         <section className='images'>
           <img
             src={images}
+            alt="Images"
           />
         </section>
       </article>

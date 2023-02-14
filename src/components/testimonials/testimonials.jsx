@@ -17,6 +17,7 @@ export default function Testimonials() {
                 <section className='image'>
                   <img
                     src={avatar}
+                    alt="Avatar"
                   />
                 </section>
 
@@ -38,6 +39,7 @@ export default function Testimonials() {
                 <section className='image'>
                   <img
                     src={avatar}
+                    alt="Avatar"
                   />
                 </section>
 
@@ -59,6 +61,7 @@ export default function Testimonials() {
                 <section className='image'>
                   <img
                     src={avatar}
+                    alt="Avatar"
                   />
                 </section>
 
@@ -80,6 +83,7 @@ export default function Testimonials() {
                 <section className='image'>
                   <img
                     src={avatar}
+                    alt="Avatar"
                   />
                 </section>
 
