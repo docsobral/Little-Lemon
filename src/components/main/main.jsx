@@ -5,9 +5,9 @@ import bruchetta from '../../assets/bruchetta.png';
 import dessert from '../../assets/lemon-dessert.png';
 import bike from '../../assets/bike.svg';
 import avatar from '../../assets/avatar.png';
-import star from '../../assets/filled-star.svg';
-import outline from '../../assets/outline-star.svg'
-import images from '../../assets/images.png'
+import images from '../../assets/images.png';
+
+import Rating from '../../components/star-rating/star-rating';
 
 export default function Main() {
   return (
@@ -157,27 +157,7 @@ export default function Main() {
 
           <section className='testimonials'>
             <section className='testimonial'>
-              <section className='rating'>
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-              </section>
+              <Rating rating={5} />
 
               <section className='avatar'>
                 <section className='image'>
@@ -198,27 +178,7 @@ export default function Main() {
             </section>
 
             <section className='testimonial'>
-              <section className='rating'>
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={outline}
-                />
-              </section>
+              <Rating rating={4} />
 
               <section className='avatar'>
                 <section className='image'>
@@ -239,27 +199,7 @@ export default function Main() {
             </section>
 
             <section className='testimonial'>
-              <section className='rating'>
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={outline}
-                />
-
-                <img
-                  src={outline}
-                />
-              </section>
+              <Rating rating={3} />
 
               <section className='avatar'>
                 <section className='image'>
@@ -280,27 +220,7 @@ export default function Main() {
             </section>
 
             <section className='testimonial'>
-              <section className='rating'>
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-
-                <img
-                  src={star}
-                />
-              </section>
+              <Rating rating={5} />
 
               <section className='avatar'>
                 <section className='image'>
