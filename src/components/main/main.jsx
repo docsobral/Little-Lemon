@@ -193,7 +193,7 @@ export default function Main() {
               </section>
 
               <section className='description'>
-                <p>“Seriously cannot stop thinking about the Turkish Mac n’ Cheese!!”</p>
+                <p>“Seriously cannot stop thinking about the Turkish Mac n' Cheese!!”</p>
               </section>
             </section>
 
@@ -275,7 +275,7 @@ export default function Main() {
               </section>
 
               <section className='description'>
-                <p>Meh...</p>
+                <p>Sure its pretty good</p>
               </section>
             </section>
 
@@ -294,11 +294,11 @@ export default function Main() {
                 />
 
                 <img
-                  src={outline}
+                  src={star}
                 />
 
                 <img
-                  src={outline}
+                  src={star}
                 />
               </section>
 
