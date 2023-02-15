@@ -1,0 +1,31 @@
+label {
+  font-family: 'Karla', sans-serif;
+  line-height: 1.15rem;
+  color: white;
+}
+
+.inner form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  max-width: 320px;
+}
+
+.inner section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.date input {
+  max-width: 14ch;
+}
+
+.time select {
+  max-width: 10ch;
+}
+
+input#guests {
+  max-width: 3ch;
+}
