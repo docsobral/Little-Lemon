@@ -3,7 +3,7 @@ import hero from '../../assets/hero.png';
 export default function CTA() {
   return (
     <main className='hero'>
-        <article className='hero'>
+        <article className='hero' id='hero'>
           <section className='heroContent'>
             <h1 className='title'>
               Little Lemon

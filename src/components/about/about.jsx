@@ -3,7 +3,7 @@ import images from '../../assets/images.png';
 export default function About() {
   return (
     <main className='restaurantDescription'>
-      <article className='restaurantDescription'>
+      <article className='restaurantDescription' id='about'>
         <section className='text'>
           <h1>
             Little Lemon

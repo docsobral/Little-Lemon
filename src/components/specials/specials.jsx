@@ -5,7 +5,7 @@ import bike from '../../assets/bike.svg';
 
 export default function Specials() {
   return (
-    <main className='specials'>
+    <main className='specials' id='specials'>
       <article className='specials'>
         <header>
           <h1 className='title'>
