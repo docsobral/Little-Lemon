@@ -3,6 +3,17 @@ section.inner {
   margin: 0px auto;
 }
 
- article.booking {
+article.booking {
   background-color: #495E57;
- }
+}
+
+.booking h1 {
+  margin: 0px;
+  padding: 1.5rem 0 0;
+
+  font-size: 3.2rem;
+  font-weight: 400;
+  font-family: 'Markazi Text', serif;
+  line-height: 3.8rem;
+  color: #F4CE14;
+}
