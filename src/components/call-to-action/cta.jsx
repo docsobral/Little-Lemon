@@ -19,7 +19,7 @@ export default function CTA() {
             </p>
 
             <section className='button'>
-              <Button href='https://www.google.com' target='_blank'>
+              <Button href='./reserve-a-table'>
                 Reserve a table
               </Button>
             </section>
