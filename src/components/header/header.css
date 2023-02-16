@@ -34,3 +34,7 @@ section.headerNav nav {
   font-family: 'Karla', sans-serif;
   font-size: 20px;
 }
+
+a {
+  cursor: pointer;
+}
