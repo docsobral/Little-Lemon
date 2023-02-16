@@ -3,6 +3,8 @@ import bruchetta from '../../assets/bruchetta.png';
 import dessert from '../../assets/lemon-dessert.png';
 import bike from '../../assets/bike.svg';
 
+import Button from 'react-bootstrap/Button';
+
 export default function Specials() {
   return (
     <main className='specials' id='specials'>
@@ -13,9 +15,9 @@ export default function Specials() {
           </h1>
 
           <section className='button'>
-            <button>
+            <Button href='https://www.google.com' target='_blank'>
               Online Menu
-            </button>
+            </Button>
           </section>
         </header>
       </article>
