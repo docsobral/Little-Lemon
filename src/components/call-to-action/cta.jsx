@@ -1,7 +1,14 @@
 import hero from '../../assets/hero.png';
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from "react-router-dom";
 
 export default function CTA() {
+  const navigate = useNavigate();
+
+  function goBook() {
+    navigate('/reserve-a-table');
+  };
+
   return (
     <main className='hero'>
         <article className='hero' id='hero'>
@@ -19,7 +26,7 @@ export default function CTA() {
             </p>
 
             <section className='button'>
-              <Button href='./reserve-a-table'>
+              <Button onClick={goBook}>
                 Reserve a table
               </Button>
             </section>
