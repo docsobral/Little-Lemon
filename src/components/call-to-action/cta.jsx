@@ -1,4 +1,5 @@
 import hero from '../../assets/hero.png';
+import Button from 'react-bootstrap/Button';
 
 export default function CTA() {
   return (
@@ -18,9 +19,9 @@ export default function CTA() {
             </p>
 
             <section className='button'>
-              <button href='https://www.google.com' target='_blank'>
+              <Button href='https://www.google.com' target='_blank'>
                 Reserve a table
-              </button>
+              </Button>
             </section>
           </section>
 

@@ -58,8 +58,9 @@ section.button {
   margin: auto 0px;
 }
 
-section.button button {
+section.button a {
   margin: auto 0px;
+  padding: 20px 25px;
 
   width: 200px;
   height: 60px;
@@ -70,6 +71,8 @@ section.button button {
   font-family: 'Karla', sans-serif;
   font-size: 18px;
   line-height: 21px;
+  color: black;
+  text-decoration: none;
 }
 
 section.heroImage {
