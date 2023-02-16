@@ -1,14 +1,24 @@
 import './main.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { useState, useEffect, useReducer } from 'react';
+import { useState, useEffect, useReducer, createContext } from 'react';
 
 import Homepage from '../homepage/homepage';
 import Booking from '../bookingPage/bookingPage';
 
-const today = new Date().toLocaleDateString();
+export const BookingContext = createContext({
+  date: undefined,
+  setDate: date => {},
+  time: undefined,
+  setTime: time => {},
+  number: 2,
+  setNumber: number => {},
+  occasion: undefined,
+  setOccasion: occasion => {},
+  availableTimes: undefined,
+});
 
-export default function Main() {
-  const [date, setDate] = useState(today);
+export function Main() {
+  const [date, setDate] = useState(undefined);
   const [time, setTime] = useState(undefined);
   const [number, setNumber] = useState(2);
   const [occasion, setOccasion] = useState(undefined);
@@ -32,28 +42,24 @@ export default function Main() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          index
-          element={
-            <Homepage />
-          }
-        />
+    <BookingContext.Provider value={{ date, setDate, time, setTime, number, setNumber, occasion, setOccasion, availableTimes }}>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            index
+            element={
+              <Homepage />
+            }
+          />
 
-        <Route
-          path='/reserve-a-table'
-          element={
-            <Booking
-              dateState={[date, setDate]}
-              timeState={[time, setTime]}
-              numberState={[number, setNumber]}
-              occasionState={[occasion, setOccasion]}
-              availableTimes={availableTimes}
-            />
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+          <Route
+            path='/reserve-a-table'
+            element={
+              <Booking />
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </BookingContext.Provider>
   );
 };
