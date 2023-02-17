@@ -5,12 +5,12 @@ import './BookingForm.css';
 export default function BookingForm(props) {
   const { date, setDate, setTime, number, setNumber, setOccasion, availableTimes } = useContext(BookingContext);
 
-  useEffect(() => {
-    console.log('date', date);
+  // useEffect(() => {
+  //   console.log('date', date);
 
-    const times = availableTimes.map(obj => obj.props.children)
-    console.log('times', times);
-  }, [date])
+  //   const times = availableTimes.map(obj => obj.props.children)
+  //   console.log('times', times);
+  // }, [availableTimes]);
 
   const chooseDate = e => {
     setDate(e.target.value);
