@@ -4,6 +4,7 @@ import { useState, useEffect, useReducer, createContext } from 'react';
 
 import Homepage from '../homepage/homepage';
 import Booking from '../bookingPage/bookingPage';
+import ConfirmedBookings from '../ConfirmedBooking/ConfirmedBooking';
 
 const today = new Date().getDate();
 
@@ -17,6 +18,8 @@ export const BookingContext = createContext({
   occasion: undefined,
   setOccasion: occasion => {},
   availableTimes: undefined,
+  submitForm: () => {},
+  submited: false,
 });
 
 export function Main() {
@@ -24,6 +27,12 @@ export function Main() {
   const [time, setTime] = useState(undefined);
   const [number, setNumber] = useState(2);
   const [occasion, setOccasion] = useState(undefined);
+  const [submited, setSubmited] = useState(false);
+
+  const submitForm = e => {
+    console.log(e);
+    setSubmited(true);
+  };
 
   const seededRandom = function(seed) {
     var m = 2**35 - 31;
@@ -32,7 +41,7 @@ export function Main() {
     return function () {
         return (s = s * a % m) / m;
     };
-  }
+  };
 
   const fetchAPI = function(date) {
     let result = [];
@@ -76,7 +85,7 @@ export function Main() {
   }, [date]);
 
   return (
-    <BookingContext.Provider value={{ date, setDate, time, setTime, number, setNumber, occasion, setOccasion, availableTimes }}>
+    <BookingContext.Provider value={{ date, setDate, time, setTime, number, setNumber, occasion, setOccasion, availableTimes, submitForm, submited }}>
       <BrowserRouter>
         <Routes>
           <Route
@@ -90,6 +99,13 @@ export function Main() {
             path='/reserve-a-table'
             element={
               <Booking />
+            }
+          />
+
+          <Route
+            path='/reservation-confirmed'
+            element={
+              <ConfirmedBookings />
             }
           />
         </Routes>

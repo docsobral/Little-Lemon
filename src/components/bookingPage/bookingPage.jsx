@@ -1,6 +1,8 @@
 import './bookingPage.css';
 import Header from '../header/header';
 import Form from '../BookingForm/BookingForm';
+import Footer from '../footer/footer';
+import About from '../about/about';
 
 export default function BookingPage(props) {
   return (
@@ -21,7 +23,11 @@ export default function BookingPage(props) {
             />
           </section>
         </article>
+
+        <About />
       </main>
+
+      <Footer />
     </>
   )
 }

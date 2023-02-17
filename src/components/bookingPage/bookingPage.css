@@ -5,11 +5,11 @@ section.inner {
 
 article.booking {
   background-color: #495E57;
+  padding: 1.5rem 0 2rem;
 }
 
 .booking h1 {
   margin: 0px;
-  padding: 1.5rem 0 0;
 
   font-size: 3.2rem;
   font-weight: 400;

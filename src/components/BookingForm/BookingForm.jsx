@@ -1,9 +1,10 @@
 import { useContext, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 import { BookingContext } from '../main/main';
 import './BookingForm.css';
 
 export default function BookingForm(props) {
-  const { date, setDate, setTime, number, setNumber, setOccasion, availableTimes } = useContext(BookingContext);
+  const { setDate, setTime, number, setNumber, setOccasion, availableTimes, submitForm } = useContext(BookingContext);
 
   // useEffect(() => {
   //   console.log('date', date);
@@ -54,6 +55,8 @@ export default function BookingForm(props) {
           <option>Anniversary</option>
         </select>
       </section>
+
+      <Button type='submit' onSubmit={submitForm} children='Submit' />
     </form>
   );
 };
