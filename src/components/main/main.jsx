@@ -5,6 +5,8 @@ import { useState, useEffect, useReducer, createContext } from 'react';
 import Homepage from '../homepage/homepage';
 import Booking from '../bookingPage/bookingPage';
 
+const today = new Date().getDate();
+
 export const BookingContext = createContext({
   date: undefined,
   setDate: date => {},
@@ -46,26 +48,31 @@ export function Main() {
     }
     return result;
   };
+
   const submitAPI = function(formData) {
     return true;
   };
-
-  const today = new Date();
 
   const initializeTimes = () => {
     const times = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
     return times.map((time, index) => <option key={index}>{time}</option>);
   };
+
   const updateTimes = (state, action) => {
-    return state =  initializeTimes();
+    switch (action.type) {
+      case ('pick date'): return action.payload;;
+      default: return initializeTimes();;
+    };
   };
 
   const [availableTimes, setAvailableTimes] = useReducer(updateTimes, initializeTimes());
 
-
   useEffect(() => {
-    updateTimes();
-    console.log('available times', availableTimes);
+    if (date !== today) {
+      let times = fetchAPI(new Date(date));
+      times = times.map((time, index) => <option key={index}>{time}</option>);
+      setAvailableTimes({ type: 'pick date', payload: times });
+    };
   }, [date]);
 
   return (

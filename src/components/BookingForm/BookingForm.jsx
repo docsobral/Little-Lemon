@@ -7,6 +7,9 @@ export default function BookingForm(props) {
 
   useEffect(() => {
     console.log('date', date);
+
+    const times = availableTimes.map(obj => obj.props.children)
+    console.log('times', times);
   }, [date])
 
   const chooseDate = e => {
