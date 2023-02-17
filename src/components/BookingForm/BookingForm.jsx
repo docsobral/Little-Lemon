@@ -1,9 +1,13 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { BookingContext } from '../main/main';
 import './BookingForm.css';
 
 export default function BookingForm(props) {
-  const { setDate, setTime, number, setNumber, setOccasion, availableTimes } = useContext(BookingContext);
+  const { date, setDate, setTime, number, setNumber, setOccasion, availableTimes } = useContext(BookingContext);
+
+  useEffect(() => {
+    console.log('date', date);
+  }, [date])
 
   const chooseDate = e => {
     setDate(e.target.value);
