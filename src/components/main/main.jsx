@@ -20,6 +20,7 @@ export const BookingContext = createContext({
   availableTimes: undefined,
   submitForm: () => {},
   submited: false,
+  response: false,
 });
 
 export function Main() {
@@ -28,9 +29,10 @@ export function Main() {
   const [number, setNumber] = useState(2);
   const [occasion, setOccasion] = useState(undefined);
   const [submited, setSubmited] = useState(false);
+  const [response, setResponse] = useState(false);
 
   const submitForm = e => {
-    console.log(e);
+    e.preventDefault();
     setSubmited(true);
   };
 
@@ -62,6 +64,17 @@ export function Main() {
     return true;
   };
 
+  useEffect(() => {
+    console.log(submited);
+
+    if (submited) {
+      const submission = submitAPI();
+      if (submission === true) {
+        setResponse(true);
+      };
+    };
+  }, [submited]);
+
   const initializeTimes = () => {
     const times = ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
     return times.map((time, index) => <option key={index}>{time}</option>);
@@ -85,7 +98,7 @@ export function Main() {
   }, [date]);
 
   return (
-    <BookingContext.Provider value={{ date, setDate, time, setTime, number, setNumber, occasion, setOccasion, availableTimes, submitForm, submited }}>
+    <BookingContext.Provider value={{ date, setDate, time, setTime, number, setNumber, occasion, setOccasion, availableTimes, submitForm, submited, response }}>
       <BrowserRouter>
         <Routes>
           <Route

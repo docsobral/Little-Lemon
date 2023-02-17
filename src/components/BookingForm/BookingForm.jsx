@@ -1,17 +1,10 @@
-import { useContext, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import { useContext } from 'react';
 import { BookingContext } from '../main/main';
+import { Navigate } from 'react-router-dom';
 import './BookingForm.css';
 
 export default function BookingForm(props) {
-  const { setDate, setTime, number, setNumber, setOccasion, availableTimes, submitForm } = useContext(BookingContext);
-
-  // useEffect(() => {
-  //   console.log('date', date);
-
-  //   const times = availableTimes.map(obj => obj.props.children)
-  //   console.log('times', times);
-  // }, [availableTimes]);
+  const { setDate, setTime, number, setNumber, setOccasion, availableTimes, submitForm, response } = useContext(BookingContext);
 
   const chooseDate = e => {
     setDate(e.target.value);
@@ -30,7 +23,7 @@ export default function BookingForm(props) {
   };
 
   return (
-    <form>
+    <form onSubmit={submitForm}>
       <section className='date'>
         <label htmlFor='res-date'>Choose date:</label>
         <input type='date' id='res-date' name='res-date' onChange={chooseDate} />
@@ -56,7 +49,8 @@ export default function BookingForm(props) {
         </select>
       </section>
 
-      <Button type='submit' onSubmit={submitForm} children='Submit' />
+      <input type='submit' value='Submit' />
+      {response ? <Navigate to='/reservation-confirmed' /> : null}
     </form>
   );
 };
