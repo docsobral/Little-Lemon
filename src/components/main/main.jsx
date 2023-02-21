@@ -8,6 +8,8 @@ import ConfirmedBookings from '../ConfirmedBooking/ConfirmedBooking';
 
 const today = new Date().getDate();
 
+export const BookingData = {};
+
 export const BookingContext = createContext({
   date: undefined,
   setDate: date => {},
@@ -30,11 +32,29 @@ export function Main() {
   const [occasion, setOccasion] = useState(undefined);
   const [submited, setSubmited] = useState(false);
   const [response, setResponse] = useState(false);
+  const [e, setE] = useState(undefined);
 
   const submitForm = e => {
     e.preventDefault();
+    setE(e);
     setSubmited(true);
   };
+
+  const saveForm = e => {
+    const BookingKeys = Object.keys(BookingData);
+    let lastKey = BookingKeys[BookingKeys.length - 1];
+
+    if (lastKey === undefined) {
+      for (let i = 0; i < 4; i++) {
+        localStorage.setItem(i, e.target[i].value);
+      };
+    } else if (typeof lastKey === number) {
+      for (let i = 0; i < 4; i++) {
+        localStorage.setItem(lastKey, e.target[i].value);
+        lastKey++
+      };
+    };
+  }
 
   const seededRandom = function(seed) {
     var m = 2**35 - 31;
@@ -72,6 +92,7 @@ export function Main() {
       if (submission === true) {
         setResponse(true);
       };
+      saveForm(e);
     };
   }, [submited]);
 
