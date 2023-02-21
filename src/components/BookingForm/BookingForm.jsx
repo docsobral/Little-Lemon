@@ -38,7 +38,7 @@ export default function BookingForm(props) {
 
       <section className='guest-number'>
         <label htmlFor='guests'>Number of guests:</label>
-        <input type='number' min='0' max='5' id='guests' name='guests' value={number} onChange={chooseNumber} />
+        <input type='number' min='1' max='5' id='guests' name='guests' value={number} onChange={chooseNumber} />
       </section>
 
       <section className='occasion'>
