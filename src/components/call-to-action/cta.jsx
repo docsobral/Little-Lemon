@@ -26,7 +26,7 @@ export default function CTA() {
             </p>
 
             <section className='button'>
-              <Button onClick={goBook}>
+              <Button onClick={goBook} aria-label="On Click">
                 Reserve a table
               </Button>
             </section>
